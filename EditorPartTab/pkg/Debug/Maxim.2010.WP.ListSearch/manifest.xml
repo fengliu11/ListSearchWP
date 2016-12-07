@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="68a03173-13ae-4e99-a3fd-2530d2cd7ed4" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="Maxim.2010WP.ListSearch.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="Maxim.2010WP.ListSearch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8f574ecc066b18c6" Namespace="EditorPartTab.TabEditorWebPart" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="ControlTemplates\Maxim.WebParts.ListSearch\ListSearchEditor.ascx" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="Maxim.WebParts.ListSearch_Maxim.WebParts.ListSearch\Feature.xml" />
+  </FeatureManifests>
+</Solution>

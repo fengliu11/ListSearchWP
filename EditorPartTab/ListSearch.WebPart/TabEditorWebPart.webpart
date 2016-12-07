@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="EditorPartTab.TabEditorWebPart.TabEditorWebPart, Maxim.2010WP.ListSearch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8f574ecc066b18c6" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">ListSearch.WebPart</property>
+        <property name="Description" type="string">Maxim Indivdual List Search Web Part</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

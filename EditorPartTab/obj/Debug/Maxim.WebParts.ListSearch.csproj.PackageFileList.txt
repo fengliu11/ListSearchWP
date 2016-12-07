@@ -1,0 +1,1 @@
+bin\Debug\Maxim.2010.WP.ListSearch.wsp

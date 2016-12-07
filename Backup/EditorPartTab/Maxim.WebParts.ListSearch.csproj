@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{180B6784-304B-4A00-BB5F-F1B012602062}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EditorPartTab</RootNamespace>
+    <AssemblyName>Maxim.2010WP.ListSearch</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <ActiveDeploymentConfiguration>No Activation</ActiveDeploymentConfiguration>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <PostDeploymentCommand>cd C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\BIN
+stsadm -o addsolution -filename "C:\Install\Maxim.2010.wp.ListSearch.wsp"
+stsadm -o deploysolution -name "Maxim.2010.wp.listsearch.wsp" -url http://poc.dev.maxhealth.com -immediate -allowGacDeployment -force
+stsadm -o installfeature -filename "Maxim.WebParts.ListSearch_Maxim.WebParts.ListSearch\feature.xml" -force
+stsadm -o activatefeature -filename "Maxim.WebParts.ListSearch_Maxim.WebParts.ListSearch\feature.xml" -url http://poc.dev.maxhealth.com -force</PostDeploymentCommand>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlTemplates\Maxim.WebParts.ListSearch\ListSearchEditor.ascx.cs">
+      <DependentUpon>ListSearchEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\Maxim.WebParts.ListSearch\ListSearchEditor.ascx.designer.cs">
+      <DependentUpon>ListSearchEditor.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ListSearchEditorPart.cs" />
+    <Compile Include="ListSearchData.cs" />
+    <Compile Include="ListSearch.WebPart\ListSearchWebPart.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ControlTemplates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b28a426c-10b6-496f-8897-dc7f1e430fce}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Maxim.WebParts.ListSearch\Maxim.WebParts.ListSearch.feature">
+      <FeatureId>{1f0e4f0a-cbe0-43da-8949-4b5650172b94}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{68a03173-13ae-4e99-a3fd-2530d2cd7ed4}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ListSearch.WebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c3077b90-3e27-45bd-92ba-e3e620f8626b}</SharePointProjectItemId>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ListSearch.WebPart\TabEditorWebPart.webpart">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ControlTemplates\Maxim.WebParts.ListSearch\ListSearchEditor.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Features\Maxim.WebParts.ListSearch\Maxim.WebParts.ListSearch.Template.xml">
+      <DependentUpon>Maxim.WebParts.ListSearch.feature</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ListSearch.WebPart\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

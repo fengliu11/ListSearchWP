@@ -1,0 +1,5 @@
+C:\Users\feliu\Documents\EditorWP\EditorPartTab\EditorPartTab\bin\Debug\EditorPartTab.dll
+C:\Users\feliu\Documents\EditorWP\EditorPartTab\EditorPartTab\bin\Debug\EditorPartTab.pdb
+C:\Users\feliu\Documents\EditorWP\EditorPartTab\EditorPartTab\obj\Debug\EditorPartTab.dll
+C:\Users\feliu\Documents\EditorWP\EditorPartTab\EditorPartTab\obj\Debug\EditorPartTab.pdb
+C:\Users\feliu\Documents\EditorWP\EditorPartTab\EditorPartTab\obj\Debug\EditorPartTab.csprojResolveAssemblyReference.cache

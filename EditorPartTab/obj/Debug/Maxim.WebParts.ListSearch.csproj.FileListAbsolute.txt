@@ -1,0 +1,5 @@
+C:\Users\feliu\Documents\EditorWP\EditorPartTab\EditorPartTab\bin\Debug\Maxim.2010WP.ListSearch.dll
+C:\Users\feliu\Documents\EditorWP\EditorPartTab\EditorPartTab\bin\Debug\Maxim.2010WP.ListSearch.pdb
+C:\Users\feliu\Documents\EditorWP\EditorPartTab\EditorPartTab\obj\Debug\Maxim.2010WP.ListSearch.dll
+C:\Users\feliu\Documents\EditorWP\EditorPartTab\EditorPartTab\obj\Debug\Maxim.2010WP.ListSearch.pdb
+C:\Users\feliu\Documents\EditorWP\EditorPartTab\EditorPartTab\obj\Debug\Maxim.WebParts.ListSearch.csprojResolveAssemblyReference.cache

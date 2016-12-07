@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="68a03173-13ae-4e99-a3fd-2530d2cd7ed4" solutionId="68a03173-13ae-4e99-a3fd-2530d2cd7ed4" resetWebServer="false" name="Maxim.2010.WP.ListSearch" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="Maxim.2010WP.ListSearch.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="bin\Release\Maxim.2010WP.ListSearch.dll">
+      <safeControls>
+        <safeControl assemblyName="Maxim.2010WP.ListSearch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8f574ecc066b18c6" namespaceName="EditorPartTab.TabEditorWebPart" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+  </assemblies>
+  <features>
+    <featureReference itemId="1f0e4f0a-cbe0-43da-8949-4b5650172b94" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="b28a426c-10b6-496f-8897-dc7f1e430fce" />
+  </projectItems>
+</package>

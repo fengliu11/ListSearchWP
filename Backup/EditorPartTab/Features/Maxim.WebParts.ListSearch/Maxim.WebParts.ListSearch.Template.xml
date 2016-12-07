@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Description="My Configurable WebPart" Id="ca829738-a56e-4ff3-b75c-6646dffd39a3" Scope="Site" Title="Maxim.2010WP.ListSearch">
+</Feature>
